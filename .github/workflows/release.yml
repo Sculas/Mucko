@@ -1,0 +1,21 @@
+name: Build Release
+
+on:
+  push:
+    branches: [ master ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: cargo build --verbose --release
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: 'Mucko Linux Binary'
+        path: target/release/mucko-bot
