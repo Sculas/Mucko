@@ -4,4 +4,5 @@ version = "0.1.0"
 edition = "2018"
 
 [dependencies]
+tokio = "1.7.1"
 serenity = "0.10"
