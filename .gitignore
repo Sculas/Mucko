@@ -91,3 +91,5 @@ Cargo.lock
 .idea/modules.xml
 .idea/misc.xml
 mucko-bot.iml
+
+.env
